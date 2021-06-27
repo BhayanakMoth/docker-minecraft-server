@@ -37,7 +37,7 @@ if ! [ -f "${ftbInstallMarker}" ] || [ $(cat "${ftbInstallMarker}") != "${FTB_MO
   rm -rf forge*jar mods config libraries defaultconfigs changelogs
 
   log "Installing modpack ID ${FTB_MODPACK_ID}, version ID ${FTB_MODPACK_VERSION_ID}"
-  ${ftbInstaller} ${FTB_MODPACK_ID} ${FTB_MODPACK_VERSION_ID} --noscript --auto
+  sudo ${ftbInstaller} ${FTB_MODPACK_ID} ${FTB_MODPACK_VERSION_ID} --noscript --auto
   rm -f forge*installer.jar
 
   echo "${FTB_MODPACK_ID}=${FTB_MODPACK_VERSION_ID}" > ${ftbInstallMarker}
